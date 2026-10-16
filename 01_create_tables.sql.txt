@@ -1,0 +1,21 @@
+-- Project: Oracle SQL & PL/SQL Toolkit
+-- File: 01_create_tables.sql
+-- Purpose: Create tables for employee reporting exercises
+
+CREATE TABLE ptk_departments (
+    department_id   NUMBER PRIMARY KEY,
+    department_name VARCHAR2(50) NOT NULL,
+    location        VARCHAR2(50)
+);
+
+CREATE TABLE ptk_employees (
+    employee_id   NUMBER PRIMARY KEY,
+    employee_name VARCHAR2(100) NOT NULL,
+    job_title     VARCHAR2(50),
+    salary        NUMBER(10,2),
+    department_id NUMBER,
+    hire_date     DATE,
+    CONSTRAINT fk_ptk_emp_dept
+        FOREIGN KEY (department_id)
+        REFERENCES ptk_departments(department_id)
+);

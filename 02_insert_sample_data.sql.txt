@@ -1,0 +1,122 @@
+-- =====================================================
+-- Project: Oracle SQL & PL/SQL Toolkit
+-- File: 02_insert_sample_data.sql
+-- Purpose: Insert 30 departments and 130 employees
+-- Note: Run after 01_create_tables.sql in an empty schema
+-- =====================================================
+
+
+-- STEP 1: INSERT 30 DEPARTMENTS
+
+INSERT ALL
+    INTO ptk_departments VALUES (10,  'IT', 'Islamabad')
+    INTO ptk_departments VALUES (20,  'HR', 'Rawalpindi')
+    INTO ptk_departments VALUES (30,  'Finance', 'Lahore')
+    INTO ptk_departments VALUES (40,  'Marketing', 'Karachi')
+    INTO ptk_departments VALUES (50,  'Sales', 'Peshawar')
+    INTO ptk_departments VALUES (60,  'Research', 'Islamabad')
+    INTO ptk_departments VALUES (70,  'Development', 'Lahore')
+    INTO ptk_departments VALUES (80,  'Operations', 'Karachi')
+    INTO ptk_departments VALUES (90,  'Customer Service', 'Rawalpindi')
+    INTO ptk_departments VALUES (100, 'Administration', 'Islamabad')
+    INTO ptk_departments VALUES (110, 'Quality Assurance', 'Lahore')
+    INTO ptk_departments VALUES (120, 'Security', 'Karachi')
+    INTO ptk_departments VALUES (130, 'Logistics', 'Peshawar')
+    INTO ptk_departments VALUES (140, 'Procurement', 'Islamabad')
+    INTO ptk_departments VALUES (150, 'Legal', 'Rawalpindi')
+    INTO ptk_departments VALUES (160, 'Training', 'Lahore')
+    INTO ptk_departments VALUES (170, 'Public Relations', 'Karachi')
+    INTO ptk_departments VALUES (180, 'Planning', 'Peshawar')
+    INTO ptk_departments VALUES (190, 'Compliance', 'Islamabad')
+    INTO ptk_departments VALUES (200, 'Data Analytics', 'Lahore')
+    INTO ptk_departments VALUES (210, 'Technical Support', 'Karachi')
+    INTO ptk_departments VALUES (220, 'Human Resources', 'Peshawar')
+    INTO ptk_departments VALUES (230, 'Accounting', 'Islamabad')
+    INTO ptk_departments VALUES (240, 'Product Management', 'Rawalpindi')
+    INTO ptk_departments VALUES (250, 'Business Development', 'Lahore')
+    INTO ptk_departments VALUES (260, 'Digital Services', 'Karachi')
+    INTO ptk_departments VALUES (270, 'Risk Management', 'Peshawar')
+    INTO ptk_departments VALUES (280, 'Internal Audit', 'Islamabad')
+    INTO ptk_departments VALUES (290, 'Facilities', 'Rawalpindi')
+    INTO ptk_departments VALUES (300, 'Innovation', 'Lahore')
+SELECT 1 FROM dual;
+
+
+-- STEP 2: INSERT THE FIRST 30 EMPLOYEES
+
+INSERT ALL
+    INTO ptk_employees VALUES (1001, 'Ahmed Khan', 'Database Developer', 95000, 10, DATE '2022-01-15')
+    INTO ptk_employees VALUES (1002, 'Sara Ali', 'HR Officer', 65000, 20, DATE '2021-03-10')
+    INTO ptk_employees VALUES (1003, 'Usman Raza', 'Accountant', 72000, 30, DATE '2020-07-20')
+    INTO ptk_employees VALUES (1004, 'Ayesha Malik', 'Marketing Executive', 68000, 40, DATE '2023-02-01')
+    INTO ptk_employees VALUES (1005, 'Bilal Hussain', 'Sales Executive', 60000, 50, DATE '2022-06-12')
+    INTO ptk_employees VALUES (1006, 'Hina Shah', 'Research Analyst', 88000, 60, DATE '2019-11-05')
+    INTO ptk_employees VALUES (1007, 'Kamran Iqbal', 'Software Engineer', 105000, 70, DATE '2021-09-18')
+    INTO ptk_employees VALUES (1008, 'Nadia Ahmed', 'Operations Officer', 75000, 80, DATE '2020-04-25')
+    INTO ptk_employees VALUES (1009, 'Farhan Aziz', 'Support Specialist', 58000, 90, DATE '2023-05-14')
+    INTO ptk_employees VALUES (1010, 'Mariam Noor', 'Administrator', 62000, 100, DATE '2022-08-08')
+    INTO ptk_employees VALUES (1011, 'Zain Abbas', 'QA Engineer', 92000, 110, DATE '2021-12-01')
+    INTO ptk_employees VALUES (1012, 'Sana Tariq', 'Security Officer', 55000, 120, DATE '2020-10-16')
+    INTO ptk_employees VALUES (1013, 'Danish Akram', 'Logistics Coordinator', 67000, 130, DATE '2022-03-22')
+    INTO ptk_employees VALUES (1014, 'Iqra Javed', 'Procurement Officer', 71000, 140, DATE '2023-01-09')
+    INTO ptk_employees VALUES (1015, 'Hamza Farooq', 'Legal Assistant', 64000, 150, DATE '2019-06-17')
+    INTO ptk_employees VALUES (1016, 'Mehwish Khan', 'Training Officer', 69000, 160, DATE '2021-04-11')
+    INTO ptk_employees VALUES (1017, 'Omar Siddiqui', 'PR Executive', 73000, 170, DATE '2022-11-23')
+    INTO ptk_employees VALUES (1018, 'Rabia Ilyas', 'Planning Analyst', 81000, 180, DATE '2020-02-19')
+    INTO ptk_employees VALUES (1019, 'Taha Mahmood', 'Compliance Officer', 86000, 190, DATE '2021-07-07')
+    INTO ptk_employees VALUES (1020, 'Amna Yousaf', 'Data Analyst', 98000, 200, DATE '2023-04-03')
+    INTO ptk_employees VALUES (1021, 'Waqas Mir', 'Technical Support Engineer', 78000, 210, DATE '2020-09-28')
+    INTO ptk_employees VALUES (1022, 'Laiba Aslam', 'HR Assistant', 52000, 220, DATE '2022-05-16')
+    INTO ptk_employees VALUES (1023, 'Shahid Nawaz', 'Senior Accountant', 110000, 230, DATE '2018-08-13')
+    INTO ptk_employees VALUES (1024, 'Eman Khalid', 'Product Analyst', 90000, 240, DATE '2021-10-04')
+    INTO ptk_employees VALUES (1025, 'Rehan Qureshi', 'Business Development Officer', 84000, 250, DATE '2022-12-12')
+    INTO ptk_employees VALUES (1026, 'Maha Saleem', 'Digital Marketing Specialist', 87000, 260, DATE '2023-06-05')
+    INTO ptk_employees VALUES (1027, 'Adnan Bashir', 'Risk Analyst', 93000, 270, DATE '2019-03-27')
+    INTO ptk_employees VALUES (1028, 'Noor Fatima', 'Internal Auditor', 96000, 280, DATE '2020-12-14')
+    INTO ptk_employees VALUES (1029, 'Salman Tariq', 'Facilities Officer', 57000, 290, DATE '2022-09-06')
+    INTO ptk_employees VALUES (1030, 'Kiran Zahid', 'Innovation Analyst', 89000, 300, DATE '2021-02-21')
+SELECT 1 FROM dual;
+
+
+-- STEP 3: GENERATE 100 ADDITIONAL EMPLOYEES
+-- Employee IDs: 1031 through 1130
+
+INSERT INTO ptk_employees (
+    employee_id,
+    employee_name,
+    job_title,
+    salary,
+    department_id,
+    hire_date
+)
+SELECT 1030 + n,
+       'Employee ' || TO_CHAR(1030 + n),
+       CASE MOD(n, 6)
+           WHEN 0 THEN 'Database Developer'
+           WHEN 1 THEN 'HR Officer'
+           WHEN 2 THEN 'Accountant'
+           WHEN 3 THEN 'Sales Executive'
+           WHEN 4 THEN 'Data Analyst'
+           ELSE 'Software Engineer'
+       END,
+       45000 + MOD(n * 1379, 65001),
+       10 * (1 + MOD(n - 1, 30)),
+       DATE '2019-01-01' + MOD(n * 17, 2800)
+FROM (
+    SELECT LEVEL AS n
+    FROM dual
+    CONNECT BY LEVEL <= 100
+);
+
+
+-- STEP 4: COMMIT THE INSERTED RECORDS
+
+
+
+-- STEP 5: VERIFY THE DATA
+
+SELECT COUNT(*) AS total_departments
+FROM ptk_departments;
+
+SELECT COUNT(*) AS total_employees
+FROM ptk_employees;

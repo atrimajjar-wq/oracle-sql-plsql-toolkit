@@ -1,0 +1,37 @@
+-- =====================================================
+-- Project: Oracle SQL & PL/SQL Toolkit
+-- File: 04_salary_procedure.sql
+-- Purpose: Safely increase an employee's salary
+-- =====================================================
+
+CREATE OR REPLACE PROCEDURE ptk_increase_salary (
+    p_employee_id IN NUMBER,
+    p_percentage  IN NUMBER
+)
+AS
+BEGIN
+    -- Validate the percentage
+    IF p_percentage IS NULL
+       OR p_percentage <= 0
+       OR p_percentage > 100 THEN
+
+        RAISE_APPLICATION_ERROR(
+            -20001,
+            'Percentage must be greater than 0 and no more than 100.'
+        );
+    END IF;
+
+    -- Increase the salary
+    UPDATE ptk_employees
+    SET salary = salary + (salary * p_percentage / 100)
+    WHERE employee_id = p_employee_id;
+
+    -- Check whether the employee exists
+    IF SQL%ROWCOUNT = 0 THEN
+        RAISE_APPLICATION_ERROR(
+            -20002,
+            'Employee ID not found.'
+        );
+    END IF;
+END ptk_increase_salary;
+/
